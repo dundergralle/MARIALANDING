@@ -48,14 +48,43 @@
   }
   .avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 2px solid rgba(255,255,255,0.15); }
   h1 { font-size: 1.5rem; font-weight: 600; color: #fff; margin-bottom: 0.35rem; letter-spacing: -0.01em; }
-  .tagline { font-size: 0.9rem; color: #bbb; margin-bottom: 0.75rem; text-align: center; line-height: 1.4; }
+  .tagline { font-size: 0.78rem; color: #bbb; margin-bottom: 0.75rem; text-align: center; line-height: 1.4; }
   .location-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border-radius: 20px; padding: 6px 14px; font-size: 0.78rem; color: #bbb; margin-bottom: 1.75rem; min-height: 32px; }
   .dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; flex-shrink: 0; animation: pulse 2s infinite; }
   @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
   .buttons { display: flex; flex-direction: column; gap: 0.65rem; width: 100%; max-width: 340px; }
-  .btn { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 52px; padding: 0 1rem; border-radius: 50px; background: rgba(255,255,255,0.12); color: #fff; font-size: 1rem; font-weight: 500; text-align: center; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; transition: opacity 0.1s; backdrop-filter: blur(6px); }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-height: 52px;
+    padding: 0 1rem;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: opacity 0.1s;
+    backdrop-filter: blur(6px);
+  }
   .btn:active { opacity: 0.75; }
   @media (hover: hover) { .btn:hover { opacity: 0.88; } }
+  .btn-icon {
+    position: absolute;
+    left: 18px;
+    display: flex;
+    align-items: center;
+  }
+  .btn-icon svg { width: 20px; height: 20px; fill: #fff; }
 </style>
 </head>
 <body>
@@ -69,15 +98,29 @@ if (window.location.pathname === '/link') {
 <div class="content">
   <img class="avatar" src="mariaprofil.jpg" alt="Profile" onerror="this.style.background='#333';this.removeAttribute('src')">
   <h1>MariaBorg</h1>
-  <p class="tagline">har nått speciellt till dig på Blåvita Sidan</p>
+  <p class="tagline">har nått speciellt till dig på Blå-vita Sidan</p>
   <div class="location-pill">
     <span class="dot"></span>
     <span id="loc-text">5 minutes ago in: ...</span>
   </div>
   <div class="buttons">
-    <a class="btn" href="/link" target="_blank">Blåvita Sidan</a>
-    <a class="btn" href="YOUR_INSTAGRAM_URL_HERE" target="_blank">Instagram</a>
-    <a class="btn" href="YOUR_TWITTER_URL_HERE" target="_blank">X/Twitter</a>
+    <a class="btn" href="/link" target="_blank">Blå-vita Sidan💙🤍</a>
+    <a class="btn" href="YOUR_INSTAGRAM_URL_HERE" target="_blank">
+      <span class="btn-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+      </span>
+      Instagram
+    </a>
+    <a class="btn" href="YOUR_TWITTER_URL_HERE" target="_blank">
+      <span class="btn-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </span>
+      X/Twitter
+    </a>
   </div>
 </div>
 
