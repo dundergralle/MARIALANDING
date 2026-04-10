@@ -6,14 +6,17 @@
 <meta name="theme-color" content="#000000">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<title>DITT NAMN HÄR</title>
+<title>MariaBorg</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html { height: 100%; }
   body {
     min-height: 100%;
     min-height: 100dvh;
-    background: #000;
+    background-color: #1a1a1a;
+    background-image: url('mariaprofil.jpg');
+    background-size: cover;
+    background-position: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     display: flex;
     flex-direction: column;
@@ -26,15 +29,31 @@
     padding-right: max(1.5rem, env(safe-area-inset-right));
     text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    position: relative;
   }
-  .avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; }
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.72);
+    z-index: 0;
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .avatar { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 2px solid rgba(255,255,255,0.15); }
   h1 { font-size: 1.5rem; font-weight: 600; color: #fff; margin-bottom: 0.35rem; letter-spacing: -0.01em; }
-  .tagline { font-size: 0.9rem; color: #aaa; margin-bottom: 0.75rem; text-align: center; line-height: 1.4; }
-  .location-pill { display: inline-flex; align-items: center; gap: 6px; background: #1a1a1a; border-radius: 20px; padding: 6px 14px; font-size: 0.78rem; color: #aaa; margin-bottom: 1.75rem; min-height: 32px; }
+  .tagline { font-size: 0.9rem; color: #bbb; margin-bottom: 0.75rem; text-align: center; line-height: 1.4; }
+  .location-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.08); border-radius: 20px; padding: 6px 14px; font-size: 0.78rem; color: #bbb; margin-bottom: 1.75rem; min-height: 32px; }
   .dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; flex-shrink: 0; animation: pulse 2s infinite; }
   @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
   .buttons { display: flex; flex-direction: column; gap: 0.65rem; width: 100%; max-width: 340px; }
-  .btn { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 52px; padding: 0 1rem; border-radius: 50px; background: #fff; color: #000; font-size: 1rem; font-weight: 500; text-align: center; text-decoration: none; border: none; cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; transition: opacity 0.1s; }
+  .btn { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 52px; padding: 0 1rem; border-radius: 50px; background: rgba(255,255,255,0.12); color: #fff; font-size: 1rem; font-weight: 500; text-align: center; text-decoration: none; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; transition: opacity 0.1s; backdrop-filter: blur(6px); }
   .btn:active { opacity: 0.75; }
   @media (hover: hover) { .btn:hover { opacity: 0.88; } }
 </style>
@@ -47,20 +66,19 @@ if (window.location.pathname === '/link') {
 }
 </script>
 
-<img class="avatar" src="mariaprofil.jpg" alt="Profile" onerror="this.style.background='#222';this.removeAttribute('src')">
-
-<h1>DITT NAMN HÄR</h1>
-<p class="tagline">DIN BESKRIVNING HÄR</p>
-
-<div class="location-pill">
-  <span class="dot"></span>
-  <span id="loc-text">5 minutes ago in: ...</span>
-</div>
-
-<div class="buttons">
-  <a class="btn" href="/link" target="_blank">Blåvita Sidan</a>
-  <a class="btn" href="YOUR_INSTAGRAM_URL_HERE" target="_blank">Instagram</a>
-  <a class="btn" href="YOUR_TWITTER_URL_HERE" target="_blank">X/Twitter</a>
+<div class="content">
+  <img class="avatar" src="mariaprofil.jpg" alt="Profile" onerror="this.style.background='#333';this.removeAttribute('src')">
+  <h1>MariaBorg</h1>
+  <p class="tagline">har nått speciellt till dig på Blåvita Sidan</p>
+  <div class="location-pill">
+    <span class="dot"></span>
+    <span id="loc-text">5 minutes ago in: ...</span>
+  </div>
+  <div class="buttons">
+    <a class="btn" href="/link" target="_blank">Blåvita Sidan</a>
+    <a class="btn" href="YOUR_INSTAGRAM_URL_HERE" target="_blank">Instagram</a>
+    <a class="btn" href="YOUR_TWITTER_URL_HERE" target="_blank">X/Twitter</a>
+  </div>
 </div>
 
 <script>
