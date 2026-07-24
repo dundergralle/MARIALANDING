@@ -3,3 +3,8 @@
   to = "/lank/linkk.html"
   status = 200
   force = true
+[[redirects]]
+  from = "/social"
+  to = "/social/social.html"
+  status = 200
+  force = true
