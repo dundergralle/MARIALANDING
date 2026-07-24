@@ -8,3 +8,8 @@
   to = "/social/linkkk.html"
   status = 200
   force = true
+[[redirects]]
+  from = "/linkkkk"
+  to = "/links/linkkk.html"
+  status = 200
+  force = true
