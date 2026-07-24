@@ -4,7 +4,7 @@
   status = 200
   force = true
 [[redirects]]
-  from = "/social"
-  to = "/social/social.html"
+  from = "/linkkk"
+  to = "/social/linkkk.html"
   status = 200
   force = true
