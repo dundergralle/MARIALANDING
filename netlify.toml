@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/linkk"
+  to = "/lank/linkk.html"
+  status = 200
+  force = true
