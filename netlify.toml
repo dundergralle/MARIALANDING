@@ -10,6 +10,6 @@
   force = true
 [[redirects]]
   from = "/linkkkk"
-  to = "/links/linkkk.html"
+  to = "/links/linkkkk.html"
   status = 200
   force = true
